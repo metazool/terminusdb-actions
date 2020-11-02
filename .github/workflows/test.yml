@@ -9,7 +9,7 @@ jobs:
     # Service containers to run - tests require CoreNLP
     services:
       terminusdb:
-        image: terminusdb/terminusdb-server:3.0.7
+        image: terminusdb/terminusdb-server:v3.0.7
         ports:
           - 6363:6363
         env:

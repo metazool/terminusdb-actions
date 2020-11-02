@@ -11,7 +11,7 @@ jobs:
       terminusdb:
         image: terminusdb/terminusdb-server:3.0.7
         env:
-          - TERMINUSDB_SERVER_MODE=serve
+          TERMINUSDB_SERVER_MODE: serve
 
     steps:
       - name: Check out repository

@@ -1,0 +1,26 @@
+name: Run tests
+on: push
+
+jobs:
+  test:
+    # Containers must run in Linux based operating systems
+    runs-on: ubuntu-latest
+
+    # Service containers to run - tests require CoreNLP
+    services:
+      terminusdb:
+        image: terminusdb/terminusdb-server:3.0.7
+        env:
+          - TERMINUSDB_SERVER_MODE=serve
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: run the tests
+        run: |
+          pip3 install setuptools>=42.0.0 wheel
+          pip3 install -r requirements.txt
+          pip3 install pytest
+          export PYTHONPATH=.:..
+          python3 -m pytest -vs

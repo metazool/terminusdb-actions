@@ -6,7 +6,9 @@ HOST = 'http://localhost:6363'
 @pytest.fixture
 def client():
     client = WOQLClient('http://localhost:6363')
-    client.basic_auth("root", "admin")
+#    client.organization("admin")
+#    client.basic_auth("admin", "root")
+    client.connect(key="root", account="admin", user="admin")
     return client
 
 def test_create(client):

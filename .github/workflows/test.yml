@@ -14,6 +14,7 @@ jobs:
           - 6363:6363
         env:
           TERMINUSDB_SERVER_MODE: serve
+          TERMINUSDB_HTTPS_ENABLED: 'false'
 
     steps:
       - name: Check out repository

@@ -6,4 +6,4 @@ services:
       - 6363:6363
     environment:
       TERMINUSDB_SERVER_MODE: serve
-      TERMINUSDB_HTTPS_ENABLED: "false" 
+      TERMINUSDB_HTTPS_ENABLED: 'false'

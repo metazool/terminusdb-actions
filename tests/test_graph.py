@@ -12,4 +12,4 @@ def client():
     return client
 
 def test_create(client):
-    client.create_database('test')
+    client.create_database('test', accountid="admin")

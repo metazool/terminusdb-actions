@@ -1,0 +1,8 @@
+version: "3.1"
+services:
+  terminusdb:
+    image: terminusdb/terminusdb-server:v3.0.7
+    ports:
+      - 6363:6363
+    environment:
+      TERMINUSDB_SERVER_MODE: serve
